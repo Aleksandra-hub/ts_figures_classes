@@ -9,8 +9,8 @@ function getTriangleArea(a: number, b: number, c: number): number {
 }
 
 export interface Figure {
-  shape: String;
-  color: String;
+  shape: Shape;
+  color: Color;
   getArea(): number;
 }
 
@@ -58,7 +58,7 @@ export class Circle implements Figure {
     this.radius = radius;
 
     if (this.radius <= 0) {
-      throw new Error('the radius is less then 0');
+      throw new Error('the radius is less than 0');
     }
   }
 
